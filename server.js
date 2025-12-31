@@ -10,7 +10,8 @@ app.use(cors());
 
 const upload = multer({ dest: "uploads/" });
 
-const API_KEY = "2b10pn0oU7yD9fgiBFyPZZ3CZO";
+const API_KEY = process.env.PLANTNET_API_KEY;
+
 
 app.post("/analyze", upload.single("image"), async (req, res) => {
     try {
@@ -45,3 +46,4 @@ app.post("/analyze", upload.single("image"), async (req, res) => {
 app.listen(3000, () => {
     console.log("Server running on http://localhost:3000");
 });
+
