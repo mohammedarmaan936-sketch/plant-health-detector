@@ -32,7 +32,8 @@ checkBtn.addEventListener("click", async () => {
         const formData = new FormData();
         formData.append("image", file);
 
-        const response = await fetch("http://localhost:3000/analyze", {
+        const response = await fetch("/analyze", {
+
             method: "POST",
             body: formData
         });
@@ -84,3 +85,4 @@ languageSelect.addEventListener("change", () => {
         checkBtn.innerText = "Check Plant Health";
     }
 });
+
