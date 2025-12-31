@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Health Detector</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <h1>🌱 Plant Health Detector</h1>
+    <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="hi">हिंदी</option>
+        <option value="gu">ગુજરાતી</option>
+    </select>
+</nav>
+
+<div class="container">
+    <div class="card fade-in">
+
+        <h2 id="uploadTitle">Upload Plant Image</h2>
+
+        <input type="file" id="imageInput" accept="image/*">
+
+        <img id="previewImage" class="preview">
+
+        <button id="checkBtn">Check Plant Health</button>
+
+        <p id="loadingText" class="loading">Analyzing plant...</p>
+
+        <div id="result" class="result">
+            <h3 id="plantName"></h3>
+
+            <div class="progress-container">
+                <div id="progressBar"></div>
+            </div>
+
+            <p id="healthText"></p>
+
+            <a href="disease.html" class="link">Read Disease Info →</a>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
